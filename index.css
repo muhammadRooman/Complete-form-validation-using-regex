@@ -3,11 +3,16 @@ body {
   margin: 0;
   box-sizing: border-box;
   font-weight: bold;
+  width: 100%;
+height: 50%;
+  margin: auto;
   background-color: antiquewhite;
+  margin-top: 2%;
+  
 }
 .mainHeading h2{
   text-align: center;
-color: rgb(183, 26, 26);
+color: rgb(26, 44, 183);
 font-family: Georgia, 'Times New Roman', Times, serif;
 font-weight: bold !important;
 }

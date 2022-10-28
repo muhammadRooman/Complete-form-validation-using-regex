@@ -14,7 +14,6 @@
     <title>Document</title>
   </head>
   <body>
-    <br />
     <div class="container">
       <div class="mainHeading">
         <h2>Form Validation</h2>
@@ -80,17 +79,18 @@
       const emailCheck = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
       // const passwordCheck = /^[1-8-a-z-A-Z]{8,15}$/
       const phoneCheck = /^[0-9-+]{11,14}$/;
+      // const phoneCheck = /^(\(\+\d{1,9}\s)?\(?\d{1,4}\)?[\s.-]?\d{3}[\s.-]?\d{4}/
       const passwordCheck = /^[1-9-a-z-A-Z-!@#$%^&*()_"<?]{8,15}$/;
       const conformPasswordCheck = /^[1-9-a-z-A-Z-!@#$%^&*()_"<?]{8,15}$/;
 
       //Data is "Not Available "so code is here
       if (
-        username == "" &&
-        lastName == "" &&
-        email == "" &&
-        password == "" &&
-        phone == "" &&
-        password == "" &&
+        username == "" ||
+        lastName == "" ||
+        email == "" ||
+        password == "" ||
+        phone == "" ||
+        password == "" ||
         conformPassword == ""
       ) {
         console.log("All Fields are empty");
@@ -107,7 +107,6 @@
         document.getElementById("phoneError").innerHTML =
           "Fill the valid  phone Number";
         document.getElementById("password").style.borderColor = "red";
-
         document.getElementById("passwordError").innerHTML =
           "Fill the valid  password! Digits greater then 8 and less then 15 ";
         document.getElementById("conformPassword").style.borderColor = "red";
@@ -195,7 +194,6 @@
       } else {
         document.getElementById("passwordError").innerHTML =
           "Fill the valid  password! Digits greater then 8 and less then 15 ";
-
         if (password == "") {
           document.getElementById("password").style.borderColor = "red";
           console.log("password is empty limit 8 to 15 ");
@@ -214,7 +212,6 @@
       } else {
         document.getElementById("conformPasswordError").innerHTML =
           "Fill the valid  password! Digits greater then 8 and less then 15 ";
-
         if (password == "") {
           document.getElementById("conformPassword").style.borderColor = "red";
           console.log("password is empty limit 8 to 15 ");
